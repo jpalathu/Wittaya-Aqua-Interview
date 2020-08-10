@@ -7,7 +7,7 @@ import axios from 'axios'
 Vue.config.productionTip = false
 
 //axios configuration
-Vue.prototype.$axios = axios.create({ baseURL: "http://localhost:9090" })
+Vue.prototype.$axios = axios.create({ baseURL: "http://localhost:8000" }) //base url for backend api routes
 
 new Vue({
   router: VueRouter,

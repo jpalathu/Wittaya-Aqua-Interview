@@ -15,7 +15,7 @@
             <v-container fluid class="ma-0 pa-0">
               <v-row no-gutters>
                 <v-col v-for="item in props.items" :key="item.feed_id" cols="4" xs="6" sm="6" md="4" lg="4" xl="4" class="px-1 pt-2">
-                  <v-card flat class="customBorder" hover>
+                  <v-card flat class="customBorder" hover @click="goToIngredientDetailPage(item.feed_id)">
                     <v-container class="ma-0 pa-0">
                       <v-row no-gutters class="pt-2" justify="center">
                         <v-col cols="12" class="body-1 font-weight-medium text-center text-truncate">{{ item.name }}
@@ -23,7 +23,7 @@
                       </v-row>
                       <v-row no-gutters justify="center" class="py-4">
                         <v-col cols="10">
-                          <v-btn block dark color="blue" class="font-weight-medium" @click="goToIngredientDetailPage(item.feed_id)">See More
+                          <v-btn block dark color="black" class="font-weight-medium text-truncate" @click="goToIngredientDetailPage(item.feed_id)">See Ingredients
                           </v-btn>
                         </v-col>
                       </v-row>

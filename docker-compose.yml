@@ -1,26 +1,49 @@
 version: '3.7'
 services:
-    
   postgres:
     container_name: database
     image: postgres:12.3-alpine
     ports:
-      - '5432'
+      - '8001:5432'
+    environment:
+      POSTGRES_DB: test_database
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: FishDev123
     networks:
       - default
 
-  interview_api:
+  interview-api:
     container_name: backend
     build: ./backend
-    restart: always
+    command: sh -c 'npm run db && npm run start'
     cap_add:
       - NET_ADMIN
     ports:
       - '8000:9090'
-    networks:
-      - default
+    environment:
+      DB_PASSWORD: FishDev123
+      DB_USER: postgres
+      DB_NAME: test_database
+      DB_HOST: db
     links:
       - postgres
+    depends_on:
+      - postgres
+    networks:
+      - default
+
+  interview-frontend:
+    container_name: frontend
+    build: ./frontend
+    ports:
+      - 80:8080
+    networks:
+      - default
+    depends_on:
+      - interview-api
+    links:
+      - interview-api
+
 
 networks:
   default:

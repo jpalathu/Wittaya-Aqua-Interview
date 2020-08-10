@@ -12,3 +12,5 @@ If the above command did not work, please try running the following shell script
 ```
 ./build.sh
 ```
+
+To access the app on the frontend, please go to http://localhost:80

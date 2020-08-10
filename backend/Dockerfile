@@ -12,10 +12,4 @@ RUN npm install
 
 COPY --chown=node:node . .
 
-ADD database.sh /home/node/app/script.sh
-
 EXPOSE 8000
-
-CMD ["./database.sh"]
-
-CMD [ "node", "server.js" ]

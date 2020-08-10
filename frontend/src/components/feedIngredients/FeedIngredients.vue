@@ -1,7 +1,7 @@
 <template>
   <v-container fluid fill-height class="ma-0 pa-0">
     <v-row no-gutters justify="center" align="center" class="pt-3">
-      <v-col cols="10" v-if="loaded">
+      <v-col cols="10" v-if="loaded" class="customBorder">
         <v-data-table :headers="headers" :items="rowData">
         </v-data-table>
       </v-col>

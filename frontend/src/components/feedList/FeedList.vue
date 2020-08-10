@@ -18,12 +18,12 @@
                   <v-card flat class="customBorder" hover @click="goToIngredientDetailPage(item.feed_id)">
                     <v-container class="ma-0 pa-0">
                       <v-row no-gutters class="pt-2" justify="center">
-                        <v-col cols="12" class="body-1 font-weight-medium text-center text-truncate">{{ item.name }}
+                        <v-col cols="12" class="body-1 font-weight-black text-center text-truncate">{{ item.name }}
                         </v-col>
                       </v-row>
                       <v-row no-gutters justify="center" class="py-4">
                         <v-col cols="10">
-                          <v-btn block dark color="black" class="font-weight-medium text-truncate" @click="goToIngredientDetailPage(item.feed_id)">See Ingredients
+                          <v-btn block dark color="#2C4E81" class="subtitle-2 text-truncate" @click="goToIngredientDetailPage(item.feed_id)">See Ingredients
                           </v-btn>
                         </v-col>
                       </v-row>

@@ -1,7 +1,7 @@
 <template>
   <v-container fluid fill-height class="ma-0 pa-0" v-if="loaded">
     <v-row no-gutters justify="center" align="center">
-      <v-col cols="12" class="text-center headline">
+      <v-col cols="12" class="text-center headline font-weight-black">
         Feeds
       </v-col>
       <v-col cols="10" class="pt-4">

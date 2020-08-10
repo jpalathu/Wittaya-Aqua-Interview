@@ -1,7 +1,17 @@
 <template>
-  <v-container fluid fill-height class="ma-0 pa-0">
-    <v-row no-gutters justify="center" align="center" class="pt-3">
-      <v-col cols="10" v-if="loaded" class="customBorder">
+  <v-container fluid fill-height v-if="loaded">
+    <v-row no-gutters justify="start" align="center">
+      <v-col cols="2" class="pb-4 ml-12">
+        <v-btn block dark @click="goToFeedList()" color="#2C4E81">
+          <v-icon class="pr-3">
+            mdi-undo
+          </v-icon>
+          Back
+        </v-btn>
+      </v-col>
+    </v-row>
+    <v-row no-gutters justify="center" align="center">
+      <v-col cols="11" class="customBorder">
         <v-data-table :headers="headers" :items="rowData">
         </v-data-table>
       </v-col>
@@ -42,6 +52,9 @@ export default {
           this.rowData = [];
           this.loaded = false;
         });
+    },
+    goToFeedList() {
+      this.$router.push(`/`);
     }
   }
 }

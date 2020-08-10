@@ -1,12 +1,10 @@
 <template>
-  <v-container fluid class="ma-0 pa-0" v-if="loaded">
+  <v-container fluid fill-height class="ma-0 pa-0" v-if="loaded">
     <v-row no-gutters justify="center" align="center">
-      <v-col cols="12" class="text-center headline pt-12">
+      <v-col cols="12" class="text-center headline">
         Feeds
       </v-col>
-    </v-row>
-    <v-row no-gutters justify="center" align="center" class="pt-3">
-      <v-col cols="10">
+      <v-col cols="10" class="pt-4">
         <FeedList :feeds="feeds" />
       </v-col>
     </v-row>

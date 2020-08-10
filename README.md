@@ -1,30 +1,14 @@
-# WittayaAquaInterview
-Code base for the Wittaya Aqua interview question
+# Wittaya Aqua Interview
+Codebase for the Wittaya Aqua interview question
 
-# Frontend
-
-## Project setup
-Navigate to frontend directory
-```
-cd frontend
-npm install
-```
-
-### Start frontend server
-```
-npm run serve
-```
-
-# Backend
 
 ## Project setup
-Navigate to backend directory
+Run the following command:
 ```
-cd backend
-npm install
+docker-compose up
 ```
 
-### Start backend server
+If the above command did not work, please try running the following shell script to build the frontend, backend, and database containers
 ```
-npm run start
+./build.sh
 ```
